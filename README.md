@@ -13,3 +13,5 @@ Added Contents
 ## Added by Advanced 2
 Added Contents
 
+## Added by Beginner 3
+Added Contents
