@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TcBusinessData xmlns="http://teamcenter.com/BusinessModel/TcBusinessData" Date="">
+<Add>
+   <Library name="H2_Part" createRelease="tc13000.3.0" serviceLibrary="false" namespace=""
+       isThirdParty="false" description="Item Library">
+     <DependentOn name="metaframework"/>
+     <DependentOn name="sa"/>
+     <DependentOn name="tccore"/>
+     <DependentOn name="tc"/>
+     <DependentOn name="cxpom"/>
+   </Library>
+   <TcClass className="H2_Item" parentClassName="Item" isExportable="false" isUninstantiable="false"
+       isUninheritable="false" description=""/>
+   <TcClass className="H2_ItemMasterS" parentClassName="ItemMaster" isExportable="false"
+       isUninstantiable="false" isUninheritable="false" description=""/>
+   <TcClass className="H2_ItemRevMasterS" parentClassName="ItemVersionMaster" isExportable="false"
+       isUninstantiable="false" isUninheritable="false" description=""/>
+   <TcClass className="H2_ItemRevision" parentClassName="ItemRevision" isExportable="false"
+       isUninstantiable="false" isUninheritable="false" description=""/>
+   <OperationInputType typeName="H2_ItemCreI" parentTypeName="ItemCreI" typeClassName="H2_ItemCreI"
+       description="CreateInput object for &quot;H2_Item&quot; business object" isAbstract="false"
+       artifactName="H2_ItemCreI"/>
+   <OperationInputType typeName="H2_ItemMasterCreI" parentTypeName="Item MasterCreI"
+       typeClassName="H2_ItemMasterCreI" description="CreateInput object for &quot;H2_ItemMaster&quot; business object"
+       isAbstract="false" artifactName="H2_ItemMasterCreI"/>
+   <OperationInputType typeName="H2_ItemMasterSCreI" parentTypeName="ItemMasterCreI"
+       typeClassName="H2_ItemMasterSCreI" description="CreateInput object for &quot;H2_ItemMasterS&quot; business object"
+       isAbstract="false" artifactName="H2_ItemMasterSCreI"/>
+   <OperationInputType typeName="H2_ItemMasterSSvAI" parentTypeName="ItemMasterSvAI"
+       typeClassName="H2_ItemMasterSSvAI" description="SaveAsInput object for &quot;H2_ItemMasterS&quot; business object"
+       isAbstract="false" artifactName="H2_ItemMasterSSvAI"/>
+   <OperationInputType typeName="H2_ItemMasterSvAI" parentTypeName="Item MasterSvAI"
+       typeClassName="H2_ItemMasterSvAI" description="SaveAsInput object for &quot;H2_ItemMaster&quot; business object"
+       isAbstract="false" artifactName="H2_ItemMasterSvAI"/>
+   <OperationInputType typeName="H2_ItemRevMasterSCreI" parentTypeName="ItemVersionMasterCreI"
+       typeClassName="H2_ItemRevMasterSCreI" description="CreateInput object for &quot;H2_ItemRevMasterS&quot; business object"
+       isAbstract="false" artifactName="H2_ItemRevMasterSCreI"/>
+   <OperationInputType typeName="H2_ItemRevMasterSSvAI" parentTypeName="ItemVersionMasterSvAI"
+       typeClassName="H2_ItemRevMasterSSvAI" description="SaveAsInput object for &quot;H2_ItemRevMasterS&quot; business object"
+       isAbstract="false" artifactName="H2_ItemRevMasterSSvAI"/>
+   <OperationInputType typeName="H2_ItemRevisionCreI" parentTypeName="ItemRevisionCreI"
+       typeClassName="H2_ItemRevisionCreI" description="CreateInput object for &quot;H2_ItemRevision&quot; business object"
+       isAbstract="false" artifactName="H2_ItemRevisionCreI"/>
+   <OperationInputType typeName="H2_ItemRevisionMasterCreI" parentTypeName="ItemRevision MasterCreI"
+       typeClassName="H2_ItemRevisionMasterCreI" description="CreateInput object for &quot;H2_ItemRevisionMaster&quot; business object"
+       isAbstract="false" artifactName="H2_ItemRevisionMasterCreI"/>
+   <OperationInputType typeName="H2_ItemRevisionMasterSvAI" parentTypeName="ItemRevision MasterSvAI"
+       typeClassName="H2_ItemRevisionMasterSvAI" description="SaveAsInput object for &quot;H2_ItemRevisionMaster&quot; business object"
+       isAbstract="false" artifactName="H2_ItemRevisionMasterSvAI"/>
+   <OperationInputType typeName="H2_ItemRevisionRevI" parentTypeName="ItemRevisionRevI"
+       typeClassName="H2_ItemRevisionRevI" description="ReviseInput object for &quot;H2_ItemRevision&quot; business object"
+       isAbstract="false" artifactName="H2_ItemRevisionRevI"/>
+   <OperationInputType typeName="H2_ItemRevisionSvAI" parentTypeName="ItemRevisionSvAI"
+       typeClassName="H2_ItemRevisionSvAI" description="SaveAsInput object for &quot;H2_ItemRevision&quot; business object"
+       isAbstract="false" artifactName="H2_ItemRevisionSvAI"/>
+   <OperationInputType typeName="H2_ItemSvAI" parentTypeName="ItemSvAI" typeClassName="H2_ItemSvAI"
+       description="SaveAsInput object for &quot;H2_Item&quot; business object" isAbstract="false"
+       artifactName="H2_ItemSvAI"/>
+   <TcForm typeName="H2_ItemMaster" parentTypeName="Item Master" typeClassName="Form"
+       description="MasterForm object for &quot;H2_Item&quot; business object" isAbstract="false"
+       artifactName="H2_ItemMaster" functionality="H2_dev" formStorageClassName="H2_ItemMasterS"/>
+   <TcForm typeName="H2_ItemRevisionMaster" parentTypeName="ItemRevision Master" typeClassName="Form"
+       description="MasterForm object for &quot;H2_ItemRevision&quot; business object"
+       isAbstract="false" artifactName="H2_ItemRevisionMaster" functionality="H2_dev"
+       formStorageClassName="H2_ItemRevMasterS"/>
+   <TcStandardType typeName="H2_Item" parentTypeName="Item" typeClassName="H2_Item"
+       description="" isAbstract="false" artifactName="H2_Item" functionality="H2_dev"/>
+   <TcStandardType typeName="H2_ItemMasterS" parentTypeName="ItemMaster" typeClassName="H2_ItemMasterS"
+       description="Form Storage object for &quot;H2_ItemMaster&quot; business object"
+       isAbstract="false" artifactName="H2_ItemMasterS" functionality="H2_dev"/>
+   <TcStandardType typeName="H2_ItemRevMasterS" parentTypeName="ItemVersionMaster"
+       typeClassName="H2_ItemRevMasterS" description="Form Storage object for &quot;H2_ItemRevMaster&quot; business object"
+       isAbstract="false" artifactName="H2_ItemRevMasterS" functionality="H2_dev"/>
+   <TcStandardType typeName="H2_ItemRevision" parentTypeName="ItemRevision" typeClassName="H2_ItemRevision"
+       description="ItemRevision object for &quot;H2_Item&quot;  business object"
+       isAbstract="false" artifactName="H2_ItemRevision" functionality="H2_dev"/>
+   <TcGlobalConstantAttach constantName="Awb0SupportsStructure" value="">
+     <ConstantValue value="H2_ItemRevision"/>
+   </TcGlobalConstantAttach>
+   <TcGlobalConstantAttach constantName="Fnd0SelectedLocales" value="en_US,ko_KR"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="H2_Item" value="H2_ItemCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="H2_ItemMaster" value="H2_ItemMasterCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="H2_ItemMasterS" value="H2_ItemMasterSCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="H2_ItemRevision" value="H2_ItemRevisionCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="H2_ItemRevisionMaster"
+       value="H2_ItemRevisionMasterCreI"/>
+   <TcTypeConstantAttach constantName="CreateInput" typeName="H2_ItemRevMasterS" value="H2_ItemRevMasterSCreI"/>
+   <TcTypeConstantAttach constantName="ItemRevision" typeName="H2_Item" value="H2_ItemRevision"/>
+   <TcTypeConstantAttach constantName="MasterForm" typeName="H2_Item" value="H2_ItemMaster"/>
+   <TcTypeConstantAttach constantName="MasterForm" typeName="H2_ItemRevision" value="H2_ItemRevisionMaster"/>
+   <TcTypeConstantAttach constantName="ReviseInput" typeName="H2_ItemRevision" value="H2_ItemRevisionRevI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="H2_Item" value="H2_ItemSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="H2_ItemMaster" value="H2_ItemMasterSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="H2_ItemMasterS" value="H2_ItemMasterSSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="H2_ItemRevision" value="H2_ItemRevisionSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="H2_ItemRevisionMaster"
+       value="H2_ItemRevisionMasterSvAI"/>
+   <TcTypeConstantAttach constantName="SaveAsInput" typeName="H2_ItemRevMasterS" value="H2_ItemRevMasterSSvAI"/>
+   <TcExtension name="H2_PartCreateAction" internal="false" cannedExtension="false"
+       languageType="CPlusPlus" libraryName="libH2_Part" description="">
+     <TcExtensionValidity parameter="TYPE:H2_Item:IMAN_save:3"/>
+   </TcExtension>
+   <TcExtensionAttach extensionName="H2_PartCreateAction" operationName="IMAN_save"
+       isActive="true" extendableElementName="H2_Item" extendableElementType="Type"
+       extensionPointType="PostAction" conditionName="isTrue" description=""/>
+   <Functionality name="H2_dev" displayName="dev" enabledForVerificationRules="false"
+       description="Component for the template - h2dev"/>
+</Add>
+</TcBusinessData>

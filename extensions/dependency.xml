@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TcBusinessDataIncludes currentTemplateVersion="13.0_0" displayName="dev" enableOpsDataDeploy="true" guid="3F608C8A6D6EE6D31EB460ABA0ABE8E4" isDescriptionMandatory="false" name="h2dev" optional="true" prefixes="H2_" teamcenterTemplate="false">
+    <include file="foundation_template.xml"/>
+    <include file="aws2_template.xml"/>
+    <include file="activeworkspacebom_template.xml"/>
+</TcBusinessDataIncludes>
