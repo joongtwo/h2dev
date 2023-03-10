@@ -8,5 +8,7 @@
    <key locale="en_US" id="BusinessObject{::}H2_ItemRevisionMaster" status="Approved">Item Revision Master</key>
    <key locale="en_US" id="BusinessObject{::}H2_ItemRevision" status="Approved">Item Revision</key>
    <key locale="en_US" id="BusinessObject{::}H2_Item" status="Approved">Hebiz Item</key>
+   <key locale="en_US" id="Property{::}H2_ItemRevision{::}h2_TypeDesc" status="Approved">Type Desc</key>
+   <key locale="en_US" id="Property{::}H2_ItemRevision{::}h2_Typename" status="Approved">Type name</key>
 </Add>
 </TcBusinessDataLocalization>

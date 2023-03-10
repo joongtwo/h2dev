@@ -16,7 +16,18 @@
    <TcClass className="H2_ItemRevMasterS" parentClassName="ItemVersionMaster" isExportable="false"
        isUninstantiable="false" isUninheritable="false" description=""/>
    <TcClass className="H2_ItemRevision" parentClassName="ItemRevision" isExportable="false"
-       isUninstantiable="false" isUninheritable="false" description=""/>
+       isUninstantiable="false" isUninheritable="false" description="">
+     <TcAttribute attributeName="h2_Typename" description="" attributeType="POM_string"
+         maxStringLength="128" isArray="false" followOnExport="false" isNullsAllowed="true"
+         isUnique="false" isPublicRead="true" isPublicWrite="true" isCandidateKey="false"
+         isTransient="false" exportAsString="false" noBackpointer="false" lowerBoundValue=""
+         upperBoundValue=""/>
+     <TcAttribute attributeName="h2_TypeDesc" description="" attributeType="POM_string"
+         maxStringLength="128" isArray="false" followOnExport="false" isNullsAllowed="true"
+         isUnique="false" isPublicRead="true" isPublicWrite="true" isCandidateKey="false"
+         isTransient="false" exportAsString="false" noBackpointer="false" lowerBoundValue=""
+         upperBoundValue=""/>
+   </TcClass>
    <OperationInputType typeName="H2_ItemCreI" parentTypeName="ItemCreI" typeClassName="H2_ItemCreI"
        description="CreateInput object for &quot;H2_Item&quot; business object" isAbstract="false"
        artifactName="H2_ItemCreI"/>
@@ -40,7 +51,12 @@
        isAbstract="false" artifactName="H2_ItemRevMasterSSvAI"/>
    <OperationInputType typeName="H2_ItemRevisionCreI" parentTypeName="ItemRevisionCreI"
        typeClassName="H2_ItemRevisionCreI" description="CreateInput object for &quot;H2_ItemRevision&quot; business object"
-       isAbstract="false" artifactName="H2_ItemRevisionCreI"/>
+       isAbstract="false" artifactName="H2_ItemRevisionCreI">
+     <OperationInputProperty propName="h2_Typename" compoundObjectConstant="" srcPropName="h2_Typename"
+         compoundObjectType="" fieldType="SimpleProperty" description=""/>
+     <OperationInputProperty propName="h2_TypeDesc" compoundObjectConstant="" srcPropName="h2_TypeDesc"
+         compoundObjectType="" fieldType="SimpleProperty" description=""/>
+   </OperationInputType>
    <OperationInputType typeName="H2_ItemRevisionMasterCreI" parentTypeName="ItemRevision MasterCreI"
        typeClassName="H2_ItemRevisionMasterCreI" description="CreateInput object for &quot;H2_ItemRevisionMaster&quot; business object"
        isAbstract="false" artifactName="H2_ItemRevisionMasterCreI"/>
@@ -103,6 +119,14 @@
    <TcExtensionAttach extensionName="H2_PartCreateAction" operationName="IMAN_save"
        isActive="true" extendableElementName="H2_Item" extendableElementType="Type"
        extensionPointType="PostAction" conditionName="isTrue" description=""/>
+   <TcPropertyConstantAttach constantName="Enabled" typeName="H2_ItemRevision" propertyName="h2_TypeDesc"
+       value="true"/>
+   <TcPropertyConstantAttach constantName="Enabled" typeName="H2_ItemRevision" propertyName="h2_Typename"
+       value="true"/>
+   <TcPropertyConstantAttach constantName="Modifiable" typeName="H2_ItemRevision"
+       propertyName="h2_TypeDesc" value="Write"/>
+   <TcPropertyConstantAttach constantName="Modifiable" typeName="H2_ItemRevision"
+       propertyName="h2_Typename" value="Write"/>
    <Functionality name="H2_dev" displayName="dev" enabledForVerificationRules="false"
        description="Component for the template - h2dev"/>
 </Add>
