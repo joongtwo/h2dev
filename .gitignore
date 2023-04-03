@@ -3,6 +3,7 @@
 /build
 /output
 /install
+/reports
 .cproject
 .project
 makefile.wntx64

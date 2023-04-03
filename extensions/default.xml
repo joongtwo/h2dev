@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TcBusinessData xmlns="http://teamcenter.com/BusinessModel/TcBusinessData" Date="">
 <Add>
+   <Library name="H2_Common" createRelease="tc13000.3.0" serviceLibrary="false" namespace=""
+       isThirdParty="false">
+     <DependentOn name="metaframework"/>
+     <DependentOn name="sa"/>
+     <DependentOn name="tccore"/>
+     <DependentOn name="tc"/>
+     <DependentOn name="cxpom"/>
+   </Library>
    <Library name="H2_Part" createRelease="tc13000.3.0" serviceLibrary="false" namespace=""
        isThirdParty="false" description="Item Library">
      <DependentOn name="metaframework"/>
@@ -90,6 +98,21 @@
    <TcStandardType typeName="H2_ItemRevision" parentTypeName="ItemRevision" typeClassName="H2_ItemRevision"
        description="ItemRevision object for &quot;H2_Item&quot;  business object"
        isAbstract="false" artifactName="H2_ItemRevision" functionality="H2_dev"/>
+   <Condition name="H2_ItemRevisionCondWF" expression="o.object_type = &quot;H2_ItemRevision&quot;"
+       secured="false" description="">
+     <ConditionParameter name="o" parameterTypeName="WorkspaceObject"/>
+     <ConditionParameter name="u" parameterTypeName="UserSession"/>
+   </Condition>
+   <Condition name="H2_ItemRevisionWF" expression="(o != NULL) AND (o.object_type = &quot;H2_ItemRevision&quot;)"
+       secured="false" description="">
+     <ConditionParameter name="o" parameterTypeName="WorkspaceObject"/>
+     <ConditionParameter name="t" parameterTypeName="ImanType"/>
+     <ConditionParameter name="u" parameterTypeName="UserSession"/>
+   </Condition>
+   <Condition name="H2_ItemWorkflowCondition" expression="o.object_type = &quot;H2_ItemRevision&quot; AND o.release_status_list=NULL"
+       secured="false" description="">
+     <ConditionParameter name="o" parameterTypeName="WorkspaceObject"/>
+   </Condition>
    <TcGlobalConstantAttach constantName="Awb0SupportsStructure" value="">
      <ConstantValue value="H2_ItemRevision"/>
    </TcGlobalConstantAttach>
@@ -112,13 +135,6 @@
    <TcTypeConstantAttach constantName="SaveAsInput" typeName="H2_ItemRevisionMaster"
        value="H2_ItemRevisionMasterSvAI"/>
    <TcTypeConstantAttach constantName="SaveAsInput" typeName="H2_ItemRevMasterS" value="H2_ItemRevMasterSSvAI"/>
-   <TcExtension name="H2_PartCreateAction" internal="false" cannedExtension="false"
-       languageType="CPlusPlus" libraryName="libH2_Part" description="">
-     <TcExtensionValidity parameter="TYPE:H2_Item:IMAN_save:3"/>
-   </TcExtension>
-   <TcExtensionAttach extensionName="H2_PartCreateAction" operationName="IMAN_save"
-       isActive="true" extendableElementName="H2_Item" extendableElementType="Type"
-       extensionPointType="PostAction" conditionName="isTrue" description=""/>
    <TcPropertyConstantAttach constantName="Enabled" typeName="H2_ItemRevision" propertyName="h2_TypeDesc"
        value="true"/>
    <TcPropertyConstantAttach constantName="Enabled" typeName="H2_ItemRevision" propertyName="h2_Typename"
@@ -127,6 +143,15 @@
        propertyName="h2_TypeDesc" value="Write"/>
    <TcPropertyConstantAttach constantName="Modifiable" typeName="H2_ItemRevision"
        propertyName="h2_Typename" value="Write"/>
+   <TcExtension name="H2_Common" internal="false" cannedExtension="false" languageType="CPlusPlus"
+       libraryName="libH2_Common" description=""/>
+   <TcExtension name="H2_PartCreateAction" internal="false" cannedExtension="false"
+       languageType="CPlusPlus" libraryName="libH2_Part" description="">
+     <TcExtensionValidity parameter="TYPE:H2_Item:createPost#Teamcenter::CreateInput,*:3"/>
+   </TcExtension>
+   <TcExtensionAttach extensionName="H2_PartCreateAction" operationName="createPost#Teamcenter::CreateInput,*"
+       isActive="true" extendableElementName="H2_Item" extendableElementType="Type"
+       extensionPointType="PostAction" conditionName="isTrue" description=""/>
    <Functionality name="H2_dev" displayName="dev" enabledForVerificationRules="false"
        description="Component for the template - h2dev"/>
 </Add>

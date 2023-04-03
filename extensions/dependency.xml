@@ -2,5 +2,13 @@
 <TcBusinessDataIncludes currentTemplateVersion="13.0_0" displayName="dev" enableOpsDataDeploy="true" guid="3F608C8A6D6EE6D31EB460ABA0ABE8E4" isDescriptionMandatory="false" name="h2dev" optional="true" prefixes="H2_" teamcenterTemplate="false">
     <include file="foundation_template.xml"/>
     <include file="aws2_template.xml"/>
+    <include file="cm_template.xml"/>
+    <include file="prg0programinfra_template.xml"/>
     <include file="activeworkspacebom_template.xml"/>
+    <include file="csi_template.xml"/>
+    <include file="pgp0awprgplanning_template.xml"/>
+    <include file="saw1projectmanagementaw_template.xml"/>
+    <include file="pch0pchinterface_template.xml"/>
+    <include file="pec0ppeventchange_template.xml"/>
+    <include file="psi0ppsminterface_template.xml"/>
 </TcBusinessDataIncludes>
