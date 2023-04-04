@@ -8,6 +8,10 @@
      <DependentOn name="tccore"/>
      <DependentOn name="tc"/>
      <DependentOn name="cxpom"/>
+     <DependentOn name="fclasses"/>
+     <DependentOn name="qry"/>
+     <DependentOn name="schmgt"/>
+     <DependentOn name="res"/>
    </Library>
    <Library name="H2_Part" createRelease="tc13000.3.0" serviceLibrary="false" namespace=""
        isThirdParty="false" description="Item Library">
@@ -16,6 +20,10 @@
      <DependentOn name="tccore"/>
      <DependentOn name="tc"/>
      <DependentOn name="cxpom"/>
+     <DependentOn name="fclasses"/>
+     <DependentOn name="qry"/>
+     <DependentOn name="schmgt"/>
+     <DependentOn name="res"/>
    </Library>
    <TcClass className="H2_Item" parentClassName="Item" isExportable="false" isUninstantiable="false"
        isUninheritable="false" description=""/>

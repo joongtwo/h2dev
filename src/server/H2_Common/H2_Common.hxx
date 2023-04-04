@@ -16,7 +16,6 @@
 #ifndef H2_COMMON_HXX
 #define H2_COMMON_HXX
 #include <tccore/method.h>
-#include <tccore/method.h>
 #include <tc/tc_util.h>
 #include <ug_va_copy.h>
 #include <tccore/tctype.h>
@@ -38,6 +37,10 @@
 #include <res/res_itk.h>
 #include <sa/user.h>
 #include <tccore/aom.h>
+
+#include <H2_Common/H2_Macro.hxx>
+#include <H2_Common/H2_Constants.hxx>
+
 #include <H2_Common/libh2_common_exports.h>
 #ifdef __cplusplus
          extern "C"{
