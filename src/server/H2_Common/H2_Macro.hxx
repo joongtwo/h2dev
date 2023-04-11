@@ -9,6 +9,8 @@
 #ifndef H2_CMACRO_HXX_
 #define H2_CMACRO_HXX_
 
+#include <tc/tc_util.h>
+#include <tc/tc_startup.h>
 
 #define STR_CAST(X) const_cast<char*>(X)
 

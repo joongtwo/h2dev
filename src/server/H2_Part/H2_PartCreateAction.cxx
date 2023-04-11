@@ -31,10 +31,9 @@ int H2_PartCreateAction( METHOD_message_t * /*msg*/, va_list args )
 
 	std::string id = "";
 	bool isNull = false;
-	ifail = creInput->getString("item_id", id, isNull);
+	H2ITK(creInput->getString("item_id", id, isNull));
 
-
-	TC_printf("-------------------------\n");
+	H2ITK(TC_printf("-------------------------\n"));
 	TC_printf("  ID = %s  \n", id.c_str());
 	TC_printf("-------------------------\n");
 

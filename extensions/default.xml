@@ -24,6 +24,7 @@
      <DependentOn name="qry"/>
      <DependentOn name="schmgt"/>
      <DependentOn name="res"/>
+     <DependentOn name="H2_Common"/>
    </Library>
    <TcClass className="H2_Item" parentClassName="Item" isExportable="false" isUninstantiable="false"
        isUninheritable="false" description=""/>
